@@ -2,9 +2,9 @@
 
 ## Python Library
 
-``
+```
 $ pip install scrapy
-``
+```
 
 ## Pentaho Data Integration (PDI)
 
@@ -15,32 +15,32 @@ Download PDI from http://community.pentaho.com/projects/data-integration/
 
 ## Collect Calendar Lists
 
-``
+```
 $ scrapy crawl qiita_calendar -o advent_calendar/data/qiita_calendar.json
 $ scrapy crawl adventar_calendar -o advent_calendar/data/adventar_calendar.json
-``
+```
 
 ## Collect Calendar Pages
 
 Make Sure the previous part is finished and the calendar json files are created.
 
-``
+```
 $ scrapy crawl qiita_article -o advent_calendar/data/qiita_article.json
 $ scrapy crawl adventar_article -o advent_calendar/data/adventar_article.json
-``
+```
 
 ## Get Hatena Bookmark counts
 
-``
+```
 $ scrapy crawl hatenabookmark -o advent_calendar/data/hatenabookmark.json
-``
+```
 
 ## Data Preparation for ETL
 
-``
+```
 $ python advent_calendar/spiders/splitter.py
 $ python advent_calendar/process/hatenabookmark_json_transform.py
-``
+```
 
 ## Run ETL job in PDI
 
